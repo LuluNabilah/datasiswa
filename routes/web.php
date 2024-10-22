@@ -7,3 +7,5 @@ Route::get('/', function () {
 });
 
 Route::get('/siswa',[App\Http\Controllers\SiswaController::class, 'index']);
+Route::get('/siswa/create',[App\Http\Controllers\SiswaController::class, 'create']);
+Route::get('/siswa/{id}/edit',[App\Http\Controllers\SiswaController::class, 'edit']);
