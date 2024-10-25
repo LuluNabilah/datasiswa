@@ -12,9 +12,8 @@
 
                                     <a href="{{ route('siswa.index') }}" class="btn btn-sm btn-secondary mb-2">Kembali</a>
 
-                                    <form action="{{ route('siswa.update') }}" method="POST">
+                                    <form action="{{ route('siswa.store') }}" method="POST">
                                         @csrf
-                                        @method('PUT')
 
                                         <div class="form-group mb-2">
                                             <label for="nama_depan" class="form-label">Nama Depan<span class="text-danger">*</span></label>

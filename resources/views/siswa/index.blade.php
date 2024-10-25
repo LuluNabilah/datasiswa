@@ -10,9 +10,10 @@
 									<h3 class="panel-title">Data Siswa</h3>
                                     <div class="row-6">
                                         <a href="/siswa/create" class="btn btn-primary btn-sm float-right">Tambah Data Siswa</a>
-                                        <button type="button" claas="btn-remove " data-toggle="modal" data-target="#exampleModal"><i class="lnr lnr-cross"></i></button>
+                                        
                                             
                                     </div>
+
 								</div>
 								<div class="panel-body">
 									<table class="table table-hover">
