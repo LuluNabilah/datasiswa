@@ -12,7 +12,7 @@
 
                                     <a href="{{ route('siswa.index') }}" class="btn btn-sm btn-secondary mb-2">Kembali</a>
 
-                                    <form action="{{ route('siswa.store') }}" method="POST">
+                                    <form action="{{ route('siswa.store') }}" method="POST" enctype="multipart/form-data">
                                         @csrf
 
                                         <div class="form-group mb-2">
@@ -21,12 +21,15 @@
 
                                            
                                         </div>
+                                        
                                         <div class="form-group mb-2">
                                             <label for="nama_belakang" class="form-label">Nama Belakang<span class="text-danger">*</span></label>
-                                            <input type="text" name="nama_belakang" id="nama" value="{{ old('nama_belakang') }}" class="form-control" /> 
-
-                                            
-
+                                            <input type="text" name="nama_belakang" id="nama" value="{{ old('nama_belakang') }}" class="form-control" />
+                                        </div>
+                                        
+                                        <div class="form-group mb-2">
+                                            <label for="email" class="form-label">Email<span class="text-danger">*</span></label>
+                                            <input type="text" name="email" id="email" value="{{ old('email') }}" class="form-control" />
                                         </div>
 
                                         <div class="form-group mb-2">

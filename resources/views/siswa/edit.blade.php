@@ -12,8 +12,9 @@
 
                                     <a href="{{ route('siswa.index') }}" class="btn btn-sm btn-secondary mb-2">Kembali</a>
 
-                                    <form action="{{ route('siswa.update') }}" method="POST">
+                                    <form action="{{ route('siswa.update', $datasiswa->id) }}" method="POST">
                                         @csrf
+                                        @method('PUT')
 
                                         <div class="form-group mb-2">
                                             <label for="nama_depan" class="form-label">Nama Depan<span class="text-danger">*</span></label>
@@ -24,8 +25,6 @@
                                         <div class="form-group mb-2">
                                             <label for="nama_belakang" class="form-label">Nama Belakang<span class="text-danger">*</span></label>
                                             <input type="text" name="nama_belakang" id="nama" value="{{ old('nama_belakang') }}" class="form-control" /> 
-
-                                            
 
                                         </div>
 

@@ -28,7 +28,7 @@ class SiswaController extends Controller
             'agama' => 'required',
         ]); 
 
-        Siswa::create($request->all());
+        $datasiswa = Siswa::create($request->all());
         return redirect()->route('siswa.index');
     }
     
@@ -48,5 +48,11 @@ class SiswaController extends Controller
         $datasiswa = Siswa::find($id);
         $datasiswa->update($request->all());
         return redirect()->route('siswa.index');
+    }
+
+    public function profile($id)
+    {
+        $datasiswa = Siswa::find($id);
+        return view('siswa.profile',['datasiswa' => $datasiswa]);
     }
 }
