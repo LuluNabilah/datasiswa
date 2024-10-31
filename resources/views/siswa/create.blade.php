@@ -23,13 +23,13 @@
                                         </div>
                                         
                                         <div class="form-group mb-2">
-                                            <label for="nama_belakang" class="form-label">Nama Belakang<span class="text-danger">*</span></label>
+                                            <label for="nama_belakang" class="form-label">Nama Belakang<span class="text-danger"></span></label>
                                             <input type="text" name="nama_belakang" id="nama" value="{{ old('nama_belakang') }}" class="form-control" />
                                         </div>
                                         
                                         <div class="form-group mb-2">
                                             <label for="email" class="form-label">Email<span class="text-danger">*</span></label>
-                                            <input type="text" name="email" id="email" value="{{ old('email') }}" class="form-control" />
+                                            <input type="email" name="email" id="email" value="{{ old('email') }}" class="form-control" />
                                         </div>
 
                                         <div class="form-group mb-2">
@@ -48,7 +48,7 @@
 
                                         
                                         <div class="form-group mb-2">
-                                            <label for="agama" class="form-label">Agama<span class="text-danger">*</span></label>
+                                            <label for="agama" class="form-label">Agama<span class="text-danger"></span></label>
                                             <input type="text" name="agama" id="agama" value="{{ old('agama') }}" class="form-control" /> 
 
                                            
@@ -58,6 +58,8 @@
                                             <label for="alamat" class="form-label">Alamat</label>
                                             <textarea name="alamat" id="alamat" class="form-control"></textarea>
                                         </div>
+
+                                        
 
                                         
                                         <button type="submit" class="btn btn-primary mb-3">Simpan</button>

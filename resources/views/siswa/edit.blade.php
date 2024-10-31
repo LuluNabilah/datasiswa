@@ -12,19 +12,19 @@
 
                                     <a href="{{ route('siswa.index') }}" class="btn btn-sm btn-secondary mb-2">Kembali</a>
 
-                                    <form action="{{ route('siswa.update', $datasiswa->id) }}" method="POST">
+                                    <form action="{{ route('siswa.update', $siswa->id) }}" method="POST">
                                         @csrf
                                         @method('PUT')
 
                                         <div class="form-group mb-2">
                                             <label for="nama_depan" class="form-label">Nama Depan<span class="text-danger">*</span></label>
-                                            <input type="text" name="nama_depan" id="nama_depan" value="{{ old('nama_depan') }}" class="form-control" /> 
+                                            <input type="text" name="nama_depan" id="nama_depan" value="{{ $siswa->nama_depan}}" class="form-control" /> 
 
                                            
                                         </div>
                                         <div class="form-group mb-2">
                                             <label for="nama_belakang" class="form-label">Nama Belakang<span class="text-danger">*</span></label>
-                                            <input type="text" name="nama_belakang" id="nama" value="{{ old('nama_belakang') }}" class="form-control" /> 
+                                            <input type="text" name="nama_belakang" id="nama" value="{{ $siswa->nama_belakang}}" class="form-control" /> 
 
                                         </div>
 
@@ -32,12 +32,12 @@
                                             <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
                                             
                                             <div class="form-check">
-                                                <input type="radio" name="jenis_kelamin" id="L" value="L" class="form-check-input" /> 
+                                                <input type="radio" name="jenis_kelamin" id="L" value="L" {{ $siswa->jenis_kelamin =='L' ? 'checked' : '' }} class="form-check-input" /> 
                                                 <label for="L" class="form-check-label">Laki-laki</label>
                                             </div>
                                             
                                             <div class="form-check">
-                                                <input type="radio" name="jenis_kelamin" id="P" value="P" class="form-check-input" /> 
+                                                <input type="radio" name="jenis_kelamin" id="P" value="P" {{ $siswa->jenis_kelamin =='P' ? 'checked' : '' }} class="form-check-input" /> 
                                                 <label for="P" class="form-check-label">Perempuan</label>
                                             </div>
                                         </div>
@@ -45,14 +45,14 @@
                                         
                                         <div class="form-group mb-2">
                                             <label for="agama" class="form-label">Agama<span class="text-danger">*</span></label>
-                                            <input type="text" name="agama" id="agama" value="{{ old('agama') }}" class="form-control" /> 
+                                            <input type="text" name="agama" id="agama" value="{{ $siswa->agama}}" class="form-control" /> 
 
                                            
                                         </div>
 
                                         <div class="form-group mb-2">
                                             <label for="alamat" class="form-label">Alamat</label>
-                                            <textarea name="alamat" id="alamat" class="form-control"></textarea>
+                                            <textarea name="alamat" id="alamat" class="form-control">{{ $siswa->alamat}}</textarea>
                                         </div>
 
                                         

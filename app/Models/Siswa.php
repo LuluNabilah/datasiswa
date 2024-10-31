@@ -14,5 +14,6 @@ class Siswa extends Model
         'agama',
         'alamat',
         'avatar',
+        'siswa_id',
     ];
 }
