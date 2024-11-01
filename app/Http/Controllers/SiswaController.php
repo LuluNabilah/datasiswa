@@ -32,7 +32,7 @@ class SiswaController extends Controller
 
         $user = Siswa::create($request->all());
         $user =  new User();
-        $user->role = "siswa";
+        $user->role = 'siswa';
         $user->name = $request->nama_depan;
         $user->email = $request->email;
         $user->password = bcrypt( 'password');

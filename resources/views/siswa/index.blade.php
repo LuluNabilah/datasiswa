@@ -27,8 +27,8 @@
 										<tbody>
                                             @foreach ($datasiswa as $siswa)
                                             <tr>
-                                                <td><a href="/siswa/{{ $siswa->id }}/profile/"></a></a>{{ $siswa->nama_belakang }}</td>
                                                 <td><a href="/siswa/{{ $siswa->id }}/profile/"></a></a>{{ $siswa->nama_depan }}</td>
+                                                <td><a href="/siswa/{{ $siswa->id }}/profile/"></a></a>{{ $siswa->nama_belakang }}</td>
                                                 <td>{{ $siswa->jenis_kelamin }}</td>
                                                 <td>{{ $siswa->agama }}</td>
                                                 <td>{{ $siswa->alamat }}</td>

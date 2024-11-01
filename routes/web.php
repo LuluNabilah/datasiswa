@@ -10,6 +10,8 @@ Route::get('/about',[App\Http\Controllers\SiteController::class, 'about']);
 Route::get('/login',[App\Http\Controllers\AuthController::class, 'login'])->name('login');
 Route::post('/postlogin',[App\Http\Controllers\AuthController::class, 'postlogin']);
 Route::get('/logout',[App\Http\Controllers\AuthController::class, 'logout']);
+Route::get('/register',[App\Http\Controllers\AuthController::class, 'register']);
+Route::post('/postregister',[App\Http\Controllers\AuthController::class, 'postregister']);
 
 
 Route::group(['middleware' => 'auth'], function () {
