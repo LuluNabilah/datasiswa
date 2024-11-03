@@ -29,5 +29,7 @@ Route::group(['middleware' => 'auth'], function () {
     
 });
 
+Route::get('/profile',[App\Http\Controllers\SiswaController::class, 'index']);
+
 
 //Route::get('/siswa/{id}',[App\Http\Controllers\SiswaController::class,'show'])->name('siswa.show');

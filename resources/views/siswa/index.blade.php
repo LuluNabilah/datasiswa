@@ -53,7 +53,7 @@
         </div>
     </div>
 
-    <form action="{{ route('siswa.destroy', $siswa->id) }}" id="form-delete" method="POST">
+    <form action="#" id="form-delete" method="POST">
         @csrf
         @method('DELETE')
     </form>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Siswa;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class SiswaController extends Controller
 {
@@ -23,26 +24,21 @@ class SiswaController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nama_depan' => 'required',
-            'nama_belakang' => 'required',
-            'jenis_kelamin' => 'required',
-            'alamat' => 'required',
-            'agama' => 'required',
-        ]); 
-
-        $user = Siswa::create($request->all());
-        $user =  new User();
-        $user->role = 'siswa';
-        $user->name = $request->nama_depan;
-        $user->email = $request->email;
-        $user->password = bcrypt( 'password');
-        //$user->remember_token = str_random(60);
-        $user->save();
-
-        $request->request->add([ 'user_id' => $user->id ]);
-        $siswa = Siswa::create($request->all());
-        return redirect('/siswa')->with('sukses','Data Berhasil Diinput');
+            'nama_depan' => 'required|string|max:255',
+            'nama_belakang' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:siswa',
+            'jenis_kelamin' => 'required|string',
+            'agama' => 'required|string',
+            'alamat' => 'required|string',
+        ]);
     
+        // Menambahkan user_id dari pengguna yang sedang login
+        $data = $request->all();
+        $data['user_id'] = Auth::id(); // Mengambil ID pengguna yang sedang login
+    
+        $user = Siswa::create($data);
+    
+        return redirect()->route('siswa.index')->with('success', 'Siswa berhasil ditambahkan.');
     }
     
     public function edit($id)
@@ -66,8 +62,9 @@ class SiswaController extends Controller
 
     public function destroy($id)
     {
-        $siswa = Siswa::find($id);
+        $siswa = Siswa::findOrFail($id);
         $siswa->delete();
-        return redirect()->route('siswa.index');
+
+        return redirect()->route('siswa.index')->with('success', 'Siswa berhasil dihapus.');
     }
 }

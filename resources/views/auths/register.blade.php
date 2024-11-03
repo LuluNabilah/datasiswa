@@ -56,7 +56,7 @@
                         <div class="overlay"></div>
                         <div class="content text">
                             <h1 class="heading">SELAMAT DATANG</h1>
-                            <p>Sekolah kami, tempat di mana potensi Anda akan berkembang dan impian Anda akan terwujud. Bergabunglah dengan kami dan jadilah bagian dari perjalanan pendidikan yang inspiratif!</p>
+                            <p>Anda Belum memiliki akun? Silahkan Register di sini</p>
                         </div>
                     </div>
                     <div class="clearfix"></div>
