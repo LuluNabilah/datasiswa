@@ -27,13 +27,13 @@
 						<div class="content">
 							<div class="header">
 								<div class="logo text-center"><img src="{{ asset('admin/img/login.png') }}" width="50" alt="Klorofil Logo"></div>
-								<p class="lead">Silahkan Login di Bawah Ini</p>
+								<p class="lead">Silahkan Daftar di bawah ini</p>
 							</div>
                             <form class="form-auth-small" action="/postregister" method="POST">
                                 {{ csrf_field() }}
                                 <div class="form-group">
-                                    <label for="signin-nama" class="control-label sr-only">Nama</label>
-                                    <input name="nama" type="nama" class="form-control" id="signin-nama"  placeholder="Nama">
+                                    <label for="signin-name" class="control-label sr-only">Nama</label>
+                                    <input name="name" type="name" class="form-control" id="signin-name"  placeholder="Nama">
                                 </div>
                                 <div class="form-group">
                                     <label for="signin-email" class="control-label sr-only">Email</label>
@@ -46,7 +46,7 @@
                                 <div class="form-group clearfix">
                                     
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">REGISTER</button>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">DAFTAR</button>
                                 
                             </form>
                             <p>Sudah punya akun? <a href="{{ route('login') }}">Login di sini</a></p>
@@ -56,7 +56,7 @@
                         <div class="overlay"></div>
                         <div class="content text">
                             <h1 class="heading">SELAMAT DATANG</h1>
-                            <p>Anda Belum memiliki akun? Silahkan Register di sini</p>
+                            <p>Anda Belum memiliki akun? Silahkan Daftar di sini</p>
                         </div>
                     </div>
                     <div class="clearfix"></div>

@@ -11,7 +11,7 @@ class SiswaController extends Controller
 {
     public function index()
     {
-        $datasiswa = Siswa::all(); // Fetch all students
+        $datasiswa = Siswa::all();
         return view('siswa.index', compact('datasiswa'));
     }
 
@@ -33,10 +33,10 @@ class SiswaController extends Controller
         ]);
     
         // Menambahkan user_id dari pengguna yang sedang login
-        $data = $request->all();
-        $data['user_id'] = Auth::id(); // Mengambil ID pengguna yang sedang login
+        $siswa = $request->all();
+        $siswa['user_id'] = Auth::id(); // Mengambil ID pengguna yang sedang login
     
-        $user = Siswa::create($data);
+        $user = Siswa::create($siswa);
     
         return redirect()->route('siswa.index')->with('success', 'Siswa berhasil ditambahkan.');
     }

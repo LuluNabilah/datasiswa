@@ -35,17 +35,9 @@ class AuthController extends Controller
 
     public function postregister(Request $request)
     {
-        $request->validate([
-            'name' => 'required',
-            'email' => 'required|email|unique:users',
-            'password' => 'required|min:6'
-        ]);
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => bcrypt($request->password)
-        ]);
-        Auth::register($user);
-        return redirect('/dashboard');
+        if (Auth::attempt($request->only('name', 'email', 'password'))) {
+            return redirect('/dashboard');
+        }
+        return redirect('/register')->withErrors(['email' => 'Invalid credentials.']);
     }
 }

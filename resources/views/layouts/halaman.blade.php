@@ -24,8 +24,8 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/register">Daftar</a></li>
+                            
                         </ul>
                     </div>
                 </div>
@@ -61,29 +61,42 @@
                         <div class="col-lg-8">
                             <div class="row gx-5 row-cols-1 row-cols-md-2">
                                 <div class="col mb-5 h-100">
-                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-egg-fill"></i></div>
                                     <h2 class="h5">AT</h2>
-                                    <p class="mb-0">Jurusan AT atau yang biasa di sebut Agribisnis Ternak. </p>
+                                    <p class="mb-0">Jurusan AT (Agribisnis Ternak)</p>
+                                    <p>Jurusan Tertua yang ada di SMK N 2 Purbalingga. Jurusan ini bisa mengasah kemampuan dalam bidang ternak</p>
                                 </div>
+
                                 <div class="col mb-5 h-100">
-                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-water"></i></div>
                                     <h2 class="h5">AP</h2>
-                                    <p class="mb-0">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
+                                    <p class="mb-0">Jurusan AP (Agribisnis Perikanan)</p>
+                                    <p> Jurusan Tertua yang ada di SMK N 2 Purbalingga.
+                                        Jurusan ini bisa mengasah kemampuan dalam bidang perikanan.</p>
                                 </div>
+
                                 <div class="col mb-5 mb-md-0 h-100">
-                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-gear"></i></div>
                                     <h2 class="h5">TO</h2>
-                                    <p class="mb-0">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
+                                    <p class="mb-0">Jurusan TO (Teknik Otomotif)</p>
+                                    <p class="mb-0">Jurusan ini bisa mengasah skill di bidang Otomotif.</p> 
                                 </div>
+
                                 <div class="col h-100">
-                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-egg-fried"></i></div>
                                     <h2 class="h5">APHP</h2>
-                                    <p class="mb-0">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
+                                    <p class="mb-0">Jurusan APHP (Agribisnis Pengolahan Hasil Pertanian)</p>
+                                    <p>Jurusan ini bisa mengasah skill di bidang kewirausahaan, karna selain pengolahan 
+                                        Jurusan ini juga di latih skill dalam bidang kewirausahaan</p>
                                 </div>
+
                                 <div class="col h-100">
-                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-laptop"></i></i></div>
                                     <h2 class="h5">PPLG</h2>
-                                    <p class="mb-0">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
+                                    <p class="mb-0">Jurusan PPLG ( Pengembangan Perangkat Lunak dan Gim)</p>
+                                    <p>Jurusan ini merupakan jurusan baru dan unggulan. Jurusan ini bisa mengasah kemampuan dalam bidang IT. 
+                                        Selain IT di Jurusan ini juga di ajarkan Desain Grafis.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -102,7 +115,7 @@
                                 <div class="d-flex align-items-center justify-content-center">
                                     <img class="rounded-circle me-3" img src="{{ asset('halaman/assets/smk.jpg') }}" width="50" alt="..." />
                                     <div class="fw-bold">
-                                        SMK BISA SMK HEBAT
+                                        SMK BISA-HEBAT
                                     </div>
                                 </div>
                             </div>
@@ -116,7 +129,7 @@
         <footer class="bg-dark py-4 mt-auto">
             <div class="container px-5">
                 <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; Your Website 2023</div></div>
+                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; Your Website 2024</div></div>
                     <div class="col-auto">
                         <a class="link-light small" href="#!">Privacy</a>
                         <span class="text-white mx-1">&middot;</span>

@@ -13,6 +13,11 @@
                                     </div>
 								</div>
 								<div class="panel-body">
+                                    <!-- Form Pencarian -->
+                                    <form action="{{ route('siswa.index') }}"  method="GET">
+                                        <input type="text" name="search" placeholder="Cari siswa..." value="{{ request()->get('search') }}">
+                                        <button type="submit">Cari</button>
+                                    </form>
 									<table class="table table-hover">
 										<thead>
 											<tr>
@@ -51,12 +56,13 @@
                 </div>
             </div>
         </div>
+        <form action="#" id="form-delete" method="POST">
+            @csrf
+            @method('DELETE')
+        </form>
     </div>
 
-    <form action="#" id="form-delete" method="POST">
-        @csrf
-        @method('DELETE')
-    </form>
+    
 
 @endsection         
         
