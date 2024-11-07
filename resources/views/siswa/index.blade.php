@@ -18,6 +18,7 @@
                                         <input type="text" name="search" placeholder="Cari siswa..." value="{{ request()->get('search') }}">
                                         <button type="submit">Cari</button>
                                     </form>
+
 									<table class="table table-hover">
 										<thead>
 											<tr>
@@ -34,7 +35,13 @@
                                             <tr>
                                                 <td><a href="/siswa/{{ $siswa->id }}/profile/"></a></a>{{ $siswa->nama_depan }}</td>
                                                 <td><a href="/siswa/{{ $siswa->id }}/profile/"></a></a>{{ $siswa->nama_belakang }}</td>
-                                                <td>{{ $siswa->jenis_kelamin }}</td>
+                                                 <td>
+                                                    @if($siswa->jenis_kelamin =="L")
+                                                        <span>Laki-laki</span>
+                                                    @else
+                                                        <span>Perempuan</span>
+                                                    @endif
+                                                </td>
                                                 <td>{{ $siswa->agama }}</td>
                                                 <td>{{ $siswa->alamat }}</td>
                                                 <td>
@@ -61,8 +68,6 @@
             @method('DELETE')
         </form>
     </div>
-
-    
 
 @endsection         
         

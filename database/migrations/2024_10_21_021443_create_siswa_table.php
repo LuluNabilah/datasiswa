@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama_depan');
             $table->string('nama_belakang');
-            $table->foreignId('siswa_id')->references('id')->on('siswa');
+            //$table->foreignId('siswa_id')->references('id')->on('siswa');
             $table->string('email')->unique();
             $table->string('jenis_kelamin');
             $table->string('agama');

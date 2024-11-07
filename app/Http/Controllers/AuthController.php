@@ -28,16 +28,14 @@ class AuthController extends Controller
         return redirect('/login');
     }
 
-    public function register()
-    {
-        return view('auths.register');
-    }
+    //public function register()
+    //{
+        //return view('auths.register');
+    //}
 
-    public function postregister(Request $request)
-    {
-        if (Auth::attempt($request->only('name', 'email', 'password'))) {
-            return redirect('/dashboard');
-        }
-        return redirect('/register')->withErrors(['email' => 'Invalid credentials.']);
-    }
+    //public function postregister(Request $request)
+    //{
+    //   
+        //return redirect('/register')->withErrors(['email' => 'Invalid credentials.']);
+    //}
 }

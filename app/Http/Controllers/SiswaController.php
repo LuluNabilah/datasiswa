@@ -56,8 +56,9 @@ class SiswaController extends Controller
 
     public function profile($id)
     {
-        $datasiswa = Siswa::find($id);
-        return view('siswa.profile',['datasiswa' => $datasiswa]);
+        //$siswa = Siswa::find($id);
+        //return view('siswa.profile',['datasiswa' => $siswa]);
+        return view('siswa.profile');
     }
 
     public function destroy($id)
